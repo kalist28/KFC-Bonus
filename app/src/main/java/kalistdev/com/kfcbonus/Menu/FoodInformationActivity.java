@@ -20,30 +20,24 @@ import kalistdev.com.kfcbonus.R;
 
 public class FoodInformationActivity extends AppCompatActivity {
 
-    private ImageView imageFood;
-    private TextView nameFood;
-    private TextView addNameFood;
-    private TextView priceFood;
-    private TextView descriptionFood;
     private TextView compositionFood;
-    private TextView caloriesFood;
     private CheckBox checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_information);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("");
 
-        imageFood = findViewById(R.id.info_food_top_image);
-        nameFood = findViewById(R.id.info_food_name);
-        addNameFood = findViewById(R.id.info_food_add_name);
-        priceFood = findViewById(R.id.info_food_price);
-        descriptionFood = findViewById(R.id.info_food_description);
+        ImageView imageFood = findViewById(R.id.info_food_top_image);
+        TextView nameFood = findViewById(R.id.info_food_name);
+        TextView addNameFood = findViewById(R.id.info_food_add_name);
+        TextView priceFood = findViewById(R.id.info_food_price);
+        TextView descriptionFood = findViewById(R.id.info_food_description);
         compositionFood = findViewById(R.id.info_food_composition);
-        caloriesFood = findViewById(R.id.info_food_calories);
+        TextView caloriesFood = findViewById(R.id.info_food_calories);
         checkBox = findViewById(R.id.info_food_checkBox);
 
         Picasso.get().load(getIntent().getStringExtra("UriImageFood")).into(imageFood);
@@ -75,6 +69,7 @@ public class FoodInformationActivity extends AppCompatActivity {
         } else {
             caloriesFood.setVisibility(View.GONE);
         }
+
         onCheckboxClicked(null);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -89,6 +84,10 @@ public class FoodInformationActivity extends AppCompatActivity {
         collapsingToolbarLayout.setTitle(" ");
     }
 
+    /**
+     * Если Checkbox активен то для @compositionFood устанавливается параметр VISIBLE иначе GONE.
+     * @param view onClick Checkbox.
+     */
     public void onCheckboxClicked(View view) {
         if (!checkBox.isChecked()){
             compositionFood.setVisibility(View.GONE);

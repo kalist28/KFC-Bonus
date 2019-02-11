@@ -27,8 +27,9 @@
                             android:id="@+id/image_food"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:adjustViewBounds="true"
-                            android:scaleType="centerInside" />
+                            android:scaleType="centerCrop" />
                         <ImageView
                             android:layout_gravity="end"
                             android:id="@+id/image_hot"

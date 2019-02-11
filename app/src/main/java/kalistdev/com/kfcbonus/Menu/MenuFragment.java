@@ -23,7 +23,6 @@ import kalistdev.com.kfcbonus.R;
 
 public class MenuFragment extends Fragment {
 
-
     SQLiteDatabase sqLiteDatabase;
     List<FoodCard> actions = new ArrayList<>();
     @Nullable
@@ -32,6 +31,9 @@ public class MenuFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_action_list, container, false);
     }
 
+    /**
+     * Заполненяет массив элементами FoodCard из DataBase.
+     */
     private void FillArrayList(){
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM category ", null);
         cursor.moveToFirst();
@@ -43,6 +45,7 @@ public class MenuFragment extends Fragment {
                     cursor.getString(4)));
             cursor.moveToNext();
         }
+        cursor.close();
     }
 
     @Override
@@ -50,7 +53,7 @@ public class MenuFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
         DataBaseHelper dataBaseHelper = new DataBaseHelper(getContext());
 
         try {

@@ -22,17 +22,19 @@ import kalistdev.com.kfcbonus.Food.Food;
 import kalistdev.com.kfcbonus.R;
 
 public class FoodsListActivity extends AppCompatActivity {
+
     SQLiteDatabase sqLiteDatabase;
     DataBaseHelper dataBaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foods_list);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         RecyclerView rv = findViewById(R.id.rv_foods);
-        GridLayoutManager mGridLayoutManager = new GridLayoutManager(getApplicationContext(), 2);
+        GridLayoutManager mGridLayoutManager = new GridLayoutManager(getApplicationContext(), 3);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -59,6 +61,14 @@ public class FoodsListActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Возвращает заполненый массив элементами Food.
+     *
+     * Этот метод получает через Intent название таблицы из DataBase и tag элемента Food.
+     * Элементы сортируются, все элементы имеющие соответствующий tag загружаются в массив
+     *
+     * @return массив элементов Food
+     */
     private List<Food> FillArrayListFastFood(){
         List<Food> foods = new ArrayList<>();
         String tableName = getIntent().getStringExtra("FoodTable");
