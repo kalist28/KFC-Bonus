@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Menu.FoodInformationActivity"
+    tools:showIn="@layout/activity_food_information">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/info_food_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"/>
+
+        <TextView
+            android:id="@+id/info_food_add_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingBottom="20sp"
+            android:textColor="@color/colorText"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:id="@+id/info_food_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/colorText"
+            android:paddingBottom="10sp"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/info_food_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:textColor="@color/colorText"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingBottom="10sp"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/info_food_calories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingBottom="10sp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"/>
+
+        <CheckBox
+            android:id="@+id/info_food_checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp"
+            android:text="Состав:"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:onClick="onCheckboxClicked"/>
+
+        <TextView
+            android:id="@+id/info_food_composition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingBottom="10sp"
+            android:textColor="@color/coloGray"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

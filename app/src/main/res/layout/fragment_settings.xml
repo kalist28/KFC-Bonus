@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите купон"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginLeft="10sp"/>
+
+        <Button
+            android:id="@+id/checkText"
+            android:layout_below="@+id/EditText"
+            android:layout_alignRight="@+id/EditText"
+            android:layout_marginRight="10sp"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:text=" Проверить "
+            android:textSize="18sp"
+            android:textColor="@color/coloWhite"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/infotext1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkText"
+            android:text="Если вы уже приобрели или хотите приобрести премиум версию приложения, то напишите на почту kalistratov.d.m@gmail.com (нажмите на mail что бы написать )"
+            android:textAlignment="center"
+            android:layout_marginRight="10sp"
+            android:layout_marginLeft="10sp"
+            android:textSize="18sp"
+            android:typeface="normal"
+            android:autoLink="web|email"/>
+
+        <TextView
+            android:id="@+id/infotext2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkText"
+            android:text="У ВАС ПРЕМИУМ ВЕРСИЯ ПРИЛОЖЕНИЯ"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+</RelativeLayout>

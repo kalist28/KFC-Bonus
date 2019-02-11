@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cv"
+        android:layout_marginLeft="8sp"
+        android:layout_marginRight="8sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="15sp"
+        app:cardCornerRadius="10sp"
+        app:cardElevation="8sp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:padding="6dp"
+                >
+
+                <ImageView
+                    android:id="@+id/coupon_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/text_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/background_material_light"
+                    android:layout_alignTop="@+id/coupon_image"
+                    android:layout_alignRight="@+id/coupon_image"
+                    android:padding="16sp"
+                    android:layout_margin="5sp"/>
+
+                <TextView
+                    android:id="@+id/text_saved"
+                    android:layout_width="100sp"
+                    android:layout_height="80sp"
+                    android:layout_alignLeft="@+id/coupon_image"
+                    android:layout_alignTop="@+id/coupon_image"
+                    android:layout_margin="2sp"
+
+                    android:textAlignment="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/background_material_light"
+                    android:textSize="20sp"
+                    android:paddingTop="28sp"
+                    android:paddingRight="10sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:src="@drawable/block"
+                    android:textColor="@color/background_material_light"
+                    android:layout_alignTop="@+id/coupon_image"
+                    android:layout_alignLeft="@+id/coupon_image"
+                    android:padding="6sp"
+                    android:layout_margin="5sp"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_couponsNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:shadowDx="-2"
+                android:shadowDy="-2"
+                android:fontFamily="sans-serif-condensed"
+                android:text="2583"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/coloWhite"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
